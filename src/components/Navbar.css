@@ -1,0 +1,148 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.611); */
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0 2px 10px rgba(34, 34, 34, 0.3); */
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  margin-left: 50px;
+}
+
+.navbar-logo:hover {
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  gap: 4px;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger-menu:hover span {
+  background: #ff0000;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.25rem;
+  align-items: center;
+  /* margin-right: 20px; */
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ff0000;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin-left: 1rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+    margin-right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    max-height: 400px;
+  }
+
+  .navbar-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+}
+
