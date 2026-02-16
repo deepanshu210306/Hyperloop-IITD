@@ -99,33 +99,73 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff0000, #cc0000);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 16px 32px rgba(255, 0, 0, 0.15);
+}
+
+.event-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Event Card Header */
+.event-card-header {
+  padding: 2rem 2rem 1.5rem 2rem;
+  text-align: center;
 }
 
 .event-title {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
-  text-align: center;
-  padding: 2rem 2rem 1rem 2rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
   position: relative;
 }
 
-.event-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
+.event-date {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cc0000;
+  margin-bottom: 0.75rem;
+}
+
+.event-highlight {
+  display: inline-block;
   background: linear-gradient(135deg, #ff0000, #cc0000);
-  border-radius: 2px;
+  color: #fff;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Event Description */
+.event-description {
+  padding: 0 2rem 1.5rem 2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin: 0;
 }
 
 .event-images {
@@ -151,7 +191,7 @@
 }
 
 .event-card:hover .event-image img {
-  transform: scale(1.05);
+  /* no zoom */
 }
 
 /* Responsive Styles */
@@ -177,9 +217,25 @@
     gap: 2.5rem;
   }
 
+  .event-card-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+
   .event-title {
     font-size: 1.5rem;
-    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  .event-description {
+    padding: 0 1.5rem 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .event-highlight {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: fit-content;
+    margin-inline: auto;
   }
 
   .event-images {

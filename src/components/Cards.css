@@ -75,7 +75,6 @@
 }
 
 .card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(255, 0, 0, 0.2);
 }
 
@@ -91,7 +90,7 @@
 }
 
 .card:hover .card-icon {
-  transform: scale(1.1) rotate(5deg);
+  /* no zoom */
 }
 
 .card-title {
@@ -141,12 +140,7 @@
 }
 
 .card-button:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
-}
-
-.card-button:active {
-  transform: scale(0.98);
 }
 
 @media (max-width: 1200px) {

@@ -168,7 +168,6 @@
 }
 
 .professor-card:hover {
-  transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(255, 0, 0, 0.2);
 }
 
@@ -200,7 +199,7 @@
 }
 
 .professor-card:hover .professor-image {
-  transform: scale(1.08);
+  /* no zoom */
 }
 
 .professor-name {
@@ -283,7 +282,6 @@
 }
 
 .team-member-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 16px 32px rgba(255, 0, 0, 0.18);
 }
 
@@ -315,7 +313,7 @@
 }
 
 .team-member-card:hover .member-image {
-  transform: scale(1.06);
+  /* no zoom */
 }
 
 .member-name {
@@ -430,6 +428,118 @@
   .professor-image-wrapper {
     width: 130px;
     height: 130px;
+  }
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, #f8f8f8 0%, #fff 100%);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff0000, #cc0000);
+}
+
+.achievement-card:hover {
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.15);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Connect Section */
+.connect-section {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem 3rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.connect-card:hover {
+  box-shadow: 0 12px 32px rgba(255, 0, 0, 0.18);
+  color: #ff0000;
+}
+
+.connect-card span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .connect-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 1.5rem 2rem;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

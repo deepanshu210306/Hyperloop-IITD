@@ -1,4 +1,4 @@
-import dummyImage from './Dummy.jpg'
+import dummyImage from './assets/common/Dummy.jpg'
 import './Hero.css'
 
 const Hero = () => {

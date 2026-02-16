@@ -2,13 +2,19 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './VerticalsPage.css'
 
-// Import images for each vertical (1 per section)
-import mechanicalSubsystems from '../components/mechanical_subsystems_1.png'
-import hyperloopAerodynamics from '../components/hyperloop_aerodynamics_1.png'
-import levitation from '../components/levitation_1.png'
-import powerSystem from '../components/power_system_1.png'
-import propulsionSystem from '../components/propulsion_system_1.png'
-import senseAndControl from '../components/sense_and_control_1.png'
+// Import images for each vertical
+import mechanicalSubsystems1 from '../components/assets/verticals/mechanical_subsystems_1.png'
+import mechanicalSubsystems2 from '../components/assets/verticals/mechanical_subsystems_2.png'
+import hyperloopAerodynamics1 from '../components/assets/verticals/hyperloop_aerodynamics_1.png'
+import hyperloopAerodynamics2 from '../components/assets/verticals/hyperloop_aerodynamics_2.png'
+import levitation1 from '../components/assets/verticals/levitation_1.png'
+import levitation2 from '../components/assets/verticals/levitation_2.png'
+import powerSystem1 from '../components/assets/verticals/power_system_1.png'
+import powerSystem2 from '../components/assets/verticals/power_system_2.png'
+import propulsionSystem1 from '../components/assets/verticals/propulsion_system_1.png'
+import propulsionSystem2 from '../components/assets/verticals/propulsion_system_2.png'
+import senseAndControl1 from '../components/assets/verticals/sense_and_control_1.png'
+import senseAndControl2 from '../components/assets/verticals/sense_and_control_2.png'
 
 const verticalsData = [
   {
@@ -22,7 +28,7 @@ const verticalsData = [
       'Precise control for safe deceleration',
       'Unparalleled Structural Integrity'
     ],
-    image: mechanicalSubsystems,
+    images: [mechanicalSubsystems1, mechanicalSubsystems2],
     icon: '⚙️'
   },
   {
@@ -35,7 +41,7 @@ const verticalsData = [
       'Advanced airflow simulations and testing',
       'Optimising pod shapes for maximum efficiency and speed'
     ],
-    image: hyperloopAerodynamics,
+    images: [hyperloopAerodynamics1, hyperloopAerodynamics2],
     icon: '🌪️'
   },
   {
@@ -49,7 +55,7 @@ const verticalsData = [
       'Custom Designed BMS (Battery Management System)',
       'Master - Slave Topology'
     ],
-    image: powerSystem,
+    images: [powerSystem1, powerSystem2],
     icon: '🔋'
   },
   {
@@ -62,7 +68,7 @@ const verticalsData = [
       'Robust Emergency Circuit',
       'Dedicated Brakes and Propulsion ECU'
     ],
-    image: senseAndControl,
+    images: [senseAndControl1, senseAndControl2],
     icon: '🎛️'
   },
   {
@@ -75,7 +81,7 @@ const verticalsData = [
       'In-House Manufactured',
       'Custom Motor Controller'
     ],
-    image: propulsionSystem,
+    images: [propulsionSystem1, propulsionSystem2],
     icon: '🚀'
   },
   {
@@ -88,7 +94,7 @@ const verticalsData = [
       'Automated gap control',
       'Continuous safety monitoring'
     ],
-    image: levitation,
+    images: [levitation1, levitation2],
     icon: '🧲'
   }
 ]
@@ -145,9 +151,11 @@ const VerticalsPage = () => {
                 <div className="vertical-number">0{vertical.id}</div>
               </div>
               <div className="vertical-image-container">
-                <div className="vertical-image-wrapper">
-                  <img src={vertical.image} alt={vertical.title} />
-                </div>
+                {vertical.images.map((img, imgIdx) => (
+                  <div key={imgIdx} className="vertical-image-wrapper">
+                    <img src={img} alt={`${vertical.title} ${imgIdx + 1}`} />
+                  </div>
+                ))}
               </div>
             </div>
           ))}

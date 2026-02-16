@@ -1,25 +1,42 @@
-import dummyImage from './Dummy.jpg'
+import dummyImage from './assets/common/Dummy.jpg'
 import './Competitions.css'
 
-const Competitions = () => {
-  const competitions = [
-    {
-      id: 1,
-      title: 'European Hyperloop Conference',
-      description: 'The European Hyperloop Week is an annual international event dedicated to the \'transport of the future\', the Hyperloop. This event enables university students, guest speakers, companies, and hyperloop enthusiasts to discuss the technology, feasibility, and scalability of the Hyperloop.'
-    },
-    {
-      id: 2,
-      title: 'Canadian Hyperloop Conference (CHC)',
-      description: 'The annual Canadian Hyperloop Conference is dedicated to developing the technologies and policies required for a fully functioning Hyperloop pod and track, by: Encouraging the development and concrete demonstration of Hyperloop technology by challenging student teams in an annual pod demo - the Canadian Hyperloop Competition. Developing a sense of community by hosting knowledge-sharing events, research, and industry speakers, and a social media presence appealing to the general public.'
-    },
-    {
-      id: 3,
-      title: 'Space-X Hyperloop Pod Competition',
-      description: 'To encourage students to contribute to the development of the Hyperloop system proposed by Elon Musk in 2013, in 2015 the aerospace company SpaceX initiated the international "SpaceX Hyperloop Pod Competition". After having set up a 1.2 km long vacuum tube next to their headquarters in Hawthorne, California, SpaceX held four editions of the competition, the last one in July 2019.'
-    }
-  ]
+const competitions = [
+  {
+    id: 1,
+    title: 'Global Hyperloop Competition (GHC)',
+    description:
+      'Organised by IIT Madras, GHC is Asia\'s first Hyperloop competition bringing all stakeholders together for revolutionizing next-generation transportation. With an upgraded track of 422 metres, GHC 2.0 saw over 200 participants showcasing their innovation. Infinity Hyperloop (IIT Delhi) participated under the DesignX category and won the Best Levitation and Stabilization Award.',
+    image: dummyImage,
+    highlight: 'Best Levitation & Stabilization Award',
+  },
+  {
+    id: 2,
+    title: 'European Hyperloop Week (EHW)',
+    description:
+      'The European Hyperloop Week is an annual international event dedicated to the \'transport of the future\', the Hyperloop. This event enables university students, guest speakers, companies, and hyperloop enthusiasts to discuss the technology, feasibility, and scalability of the Hyperloop.',
+    image: dummyImage,
+    highlight: null,
+  },
+  {
+    id: 3,
+    title: 'Canadian Hyperloop Conference (CHC)',
+    description:
+      'The annual Canadian Hyperloop Conference is dedicated to developing the technologies and policies required for a fully functioning Hyperloop pod and track, by encouraging the development and concrete demonstration of Hyperloop technology through an annual pod demo and building community via knowledge-sharing events, research, and industry speakers.',
+    image: dummyImage,
+    highlight: null,
+  },
+  {
+    id: 4,
+    title: 'SpaceX Hyperloop Pod Competition',
+    description:
+      'To encourage students to contribute to the development of the Hyperloop system proposed by Elon Musk in 2013, in 2015 SpaceX initiated the international "SpaceX Hyperloop Pod Competition". After setting up a 1.2 km long vacuum tube next to their headquarters in Hawthorne, California, SpaceX held four editions of the competition, the last one in July 2019.',
+    image: dummyImage,
+    highlight: null,
+  },
+]
 
+const Competitions = () => {
   return (
     <section className="competitions-section">
       <div className="competitions-container">
@@ -29,10 +46,13 @@ const Competitions = () => {
             <div key={competition.id} className="competition-item">
               <div className="competition-text">
                 <h3 className="competition-item-title">{competition.title}</h3>
+                {competition.highlight && (
+                  <span className="competition-highlight">{competition.highlight}</span>
+                )}
                 <p className="competition-description">{competition.description}</p>
               </div>
               <div className="competition-image">
-                <img src={dummyImage} alt={competition.title} />
+                <img src={competition.image} alt={competition.title} />
               </div>
             </div>
           ))}
@@ -43,4 +63,3 @@ const Competitions = () => {
 }
 
 export default Competitions
-

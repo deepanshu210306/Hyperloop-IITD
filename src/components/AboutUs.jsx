@@ -1,9 +1,9 @@
-import dummyImage from './Dummy.jpg'
-import profKrishna from './prof krishna.png'
-import profSumitP from './Prof. Sumit P.png'
-import profSunilJha from './Prof. Sunil Jha.png'
-import profDDasgupta from './Prof. D. Dasgupta.png'
-import profKrishanKant from './Prof. Krishan kant.png'
+import dummyImage from './assets/common/Dummy.jpg'
+import profKrishna from './assets/professors/prof krishna.png'
+import profSumitP from './assets/professors/Prof. Sumit P.png'
+import profSunilJha from './assets/professors/Prof. Sunil Jha.png'
+import profDDasgupta from './assets/professors/Prof. D. Dasgupta.png'
+import profKrishanKant from './assets/professors/Prof. Krishan kant.png'
 import './AboutUs.css'
 
 const AboutUs = () => {
@@ -22,10 +22,10 @@ const AboutUs = () => {
           <div className="about-us-text">
             <h2 className="about-us-title">About Us</h2>
             <p className="about-us-paragraph">
-              We are a team of 25+ zealous undergraduate engineers from several disciplines of IIT Delhi working together to empower this world with another mode of transportation technology.
+              We are a team of 25+ zealous undergraduate engineers from across disciplines at IIT Delhi, working together to reimagine transportation through Hyperloop, the fifth mode of transportation.
             </p>
             <p className="about-us-paragraph">
-              Our team believes in diligence, discipline, hard work, and learning. We are committed to promoting interdisciplinary exchanges of knowledge and ideas. As part of our mission, we intend to develop an autonomous scalable pod and develop new technologies to facilitate the commercialization of the hyperloop system. Currently, we are working in the institute's laboratory. Being the latest addition to the technical clubs of IIT Delhi, we are looking for tech enthusiasts ready to take the hyperloop industry to the next level. We have a team of experienced faculty advisors, and innovative engineers prepared to take transportation technology to new heights.
+              Our team strives to blend technical acumen with focus on diligence, discipline and perseverance to drive innovation using the Triple Helix model, where we continuously work on exchange of interdisciplinary knowledge from academia to meet the needs of industry with the support of government. Having achieved levitation recently that our team showcased at GHC IIT-M 2026, we are committed to develop an autonomous scalable pod and develop associated innovation technologies to facilitate the commercialization of the hyperloop system. We are based in the State of the Art Research & Innovation Park, IIT Delhi.
             </p>
           </div>
           <div className="about-us-image">

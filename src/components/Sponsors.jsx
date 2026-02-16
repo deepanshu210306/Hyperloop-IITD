@@ -1,10 +1,13 @@
-import logo from './logo.png'
 import './Sponsors.css'
 
-const Sponsors = () => {
-  // Using current logo for all 9 sponsors - will be replaced later
-  const sponsors = Array(12).fill({ logo, name: 'Sponsor' })
+const sponsors = [
+  { name: 'SOLIDWORKS', logo: null },
+  { name: 'ANSYS', logo: null },
+  { name: 'Altium', logo: null },
+  { name: 'PCB Power', logo: null },
+]
 
+const Sponsors = () => {
   return (
     <section className="sponsors-section">
       <div className="sponsors-container">
@@ -12,7 +15,11 @@ const Sponsors = () => {
         <div className="sponsors-grid">
           {sponsors.map((sponsor, index) => (
             <div key={index} className="sponsor-item">
-              <img src={sponsor.logo} alt={`${sponsor.name} ${index + 1}`} className="sponsor-logo" />
+              {sponsor.logo ? (
+                <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
+              ) : (
+                <span className="sponsor-name-text">{sponsor.name}</span>
+              )}
             </div>
           ))}
         </div>
@@ -22,4 +29,3 @@ const Sponsors = () => {
 }
 
 export default Sponsors
-

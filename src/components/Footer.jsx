@@ -1,4 +1,4 @@
-import logo from './logo.png'
+import logo from './assets/common/logo.png'
 import './Footer.css'
 
 const Footer = () => {
@@ -33,12 +33,6 @@ const Footer = () => {
                   Hauzkhas 110016
                 </p>
               </div>
-              <div className="contact-item">
-                <span className="contact-label">Phone:</span>
-                <a href="tel:+919919511149" className="footer-link">
-                  +91 9919511149
-                </a>
-              </div>
             </div>
             <div className="footer-section footer-social-section">
               <h4 className="footer-heading">Follow Us</h4>
@@ -48,8 +42,8 @@ const Footer = () => {
               </div>
               <div className="contact-item" style={{ marginTop: '1rem' }}>
                 <span className="contact-label">Email:</span>
-                <a href="mailto:infinityhyperloop@iitd.ac.in" className="footer-link">
-                  infinityhyperloop@iitd.ac.in
+                <a href="mailto:infinityhyperloop@admin.iitd.ac.in" className="footer-link">
+                  infinityhyperloop@admin.iitd.ac.in
                 </a>
               </div>
             </div>

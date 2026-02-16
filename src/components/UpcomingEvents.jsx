@@ -1,19 +1,19 @@
 import './UpcomingEvents.css'
 
 // Event images
-import maglec1 from './maglec_decoded_1.HEIC'
-import maglec2 from './maglec_decoded_2.HEIC'
-import openhouse1 from './openhouse_2025_1.HEIC'
-import openhouse2 from './openhouse_2025_2.HEIC'
-import redbull1 from './red_bull_1.HEIC'
-import testbench1 from './testbench_1.png'
-import testbench2 from './testbench_2.HEIC'
+import maglec1 from './assets/events/maglec_decoded_1.png'
+import maglec2 from './assets/events/maglec_decoded_2.png'
+import openhouse1 from './assets/events/openhouse_2025_1.png'
+import openhouse2 from './assets/events/openhouse_2025_2.png'
+import redbull1 from './assets/events/red_bull_1.png'
+import testbench1 from './assets/events/testbench_1.png'
+import testbench2 from './assets/events/testbench_2.png'
 
 const UpcomingEvents = () => {
   const events = [
     {
       id: 1,
-      title: 'Maglec Decoded',
+      title: 'Maglev Decoded',
       images: [maglec1, maglec2]
     },
     {

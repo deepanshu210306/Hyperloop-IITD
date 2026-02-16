@@ -54,6 +54,14 @@
   object-fit: contain;
 }
 
+.sponsor-name-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
 @media (max-width: 968px) {
   .sponsors-grid {
     grid-template-columns: repeat(2, 1fr);

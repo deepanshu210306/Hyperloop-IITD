@@ -165,7 +165,6 @@
 
 .vertical-item:hover {
   box-shadow: 0 12px 40px rgba(255, 0, 0, 0.12);
-  transform: translateY(-4px);
 }
 
 .vertical-item:hover::before {
@@ -290,8 +289,10 @@
 /* Vertical Image */
 .vertical-image-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.25rem;
 }
 
 .vertical-image-wrapper {
@@ -301,6 +302,11 @@
   position: relative;
   width: 100%;
   max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vertical-image-wrapper:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 .vertical-image-wrapper img {
