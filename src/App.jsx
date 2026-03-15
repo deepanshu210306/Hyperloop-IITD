@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import AboutPage from './pages/AboutPage'
 import TeamPage from './pages/TeamPage'
+import AlumniPage from './pages/AlumniPage'
 import VerticalsPage from './pages/VerticalsPage'
 import EventsPage from './pages/EventsPage'
 import './App.css'
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/alumni" element={<AlumniPage />} />
         <Route path="/verticals" element={<VerticalsPage />} />
         <Route path="/events" element={<EventsPage />} />
       </Routes>

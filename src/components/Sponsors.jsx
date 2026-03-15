@@ -1,10 +1,15 @@
 import './Sponsors.css'
 
+import solidworksLogo from './assets/sponsors/solidworks_logo.png'
+import ansysLogo from './assets/sponsors/ANSYS_logo.png'
+import altiumLogo from './assets/sponsors/altium_logo.png'
+import pcbPowerLogo from './assets/sponsors/pcb_power.webp'
+
 const sponsors = [
-  { name: 'SOLIDWORKS', logo: null },
-  { name: 'ANSYS', logo: null },
-  { name: 'Altium', logo: null },
-  { name: 'PCB Power', logo: null },
+  { name: 'SOLIDWORKS', logo: solidworksLogo },
+  { name: 'ANSYS', logo: ansysLogo },
+  { name: 'Altium', logo: altiumLogo },
+  { name: 'PCB Power', logo: pcbPowerLogo },
 ]
 
 const Sponsors = () => {

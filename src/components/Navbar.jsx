@@ -32,6 +32,9 @@ const Navbar = () => {
             <Link to="/team" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Team</Link>
           </li>
           <li className="navbar-item">
+            <Link to="/alumni" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Alumni</Link>
+          </li>
+          <li className="navbar-item">
             <Link to="/verticals" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Verticals</Link>
           </li>
           <li className="navbar-item">
